@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+:root {
+    /* ## Colors */
+    /* ### Primary */
+    --blue: hsl(223, 87%, 63%);
+    --blue-transparent: hsla(223, 87%, 63%, 0.3);
+    /* ### Secondary */
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-Red: hsl(354, 100%, 66%);
+    /* ### Neutral */
+    --gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+    /* ## Typography */
+    --body-font: 'Libre Franklin', sans-serif;
+}
+
+body {
+    padding: 3rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    font-family: var(--body-font);
+    color: var(--gray);
+}
+
+header,
+main,
+footer {
+    max-width: 600px;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+main h1,
+main p {
+    margin-bottom: 1.4rem;
+}
+
+main p {
+    font-weight: 700;
+}
+
+main h1 span {
+    font-weight: 700;
+    color: var(--very-dark-blue);
+}
+
+.notify-section {
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.notify-section input,
+.notify-section button {
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    margin-right: 1rem;
+}
+
+.notify-section input::placeholder {
+    color: var(--pale-blue);
+    font-weight: 700;
+}
+
+.notify-section input {
+    border: 1px solid var(--pale-blue);
+}
+
+.notify-section button {
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    box-shadow: 1px 6px 20px 3px var(--blue-transparent);
+    transition: .3s;
+}
+
+.error-msg {
+    display: none;
+    position: absolute;
+    color: var(--soft-red);
+    top: 130%;
+    left: 5%;
+    font-size: 0.8rem;
+}
+
+.notify-section button:hover {
+    background-color: var(--pale-blue);
+    cursor: pointer;
+}
+
+.main-dashboard-image {
+    max-width: 450px;
+    width: 100%;
+}
+
+.icon {
+    margin-right: 1.2rem;
+}
+
+.icon:hover {
+    cursor: pointer;
+    transition: .3s;
+}
+
+.main-dashboard-image,
+.footer-social {
+    margin-bottom: 2rem;
+    color: var(--blue);
+}
+
+@media screen and (max-width: 576px) {
+    .notify-section {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+    }
+    .notify-section input,
+    .notify-section button {
+        margin-bottom: 2rem;
+    }
+    .error-msg {
+        top: 40%;
+        left: 5%;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}
